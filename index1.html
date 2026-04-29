@@ -197,5 +197,8 @@ addEventListener('click',()=>{if(!cracked){cracked=true;planet.material.color.se
 setTimeout(()=>{planet.material.color.set(0xff8ed8);planet.material.emissive.set(0xff44aa);cracked=false;},2200);}for(let i=0;i<30;i++){ const m=new THREE.Mesh(new THREE.SphereGeometry(.03,8,8),new THREE.MeshBasicMaterial({color:0xffffff}));m.position.set((Math.random()-.5)*8,(Math.random()-.5)*4,-6);scene.add(m);const vx=(Math.random()-.5)*.2,vy=(Math.random()-.5)*.2,vz=.35+Math.random()*.25;let life=0;function fly(){life++;m.position.x+=vx;m.position.y+=vy;m.position.z+=vz;if(life<80) requestAnimationFrame(fly); else scene.remove(m);}fly();}});
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
 </script>
+  <audio id='bgm' loop autoplay>
+<source src='https://open.spotify.com/album/6GJV5HSWrRhiM6TLg5dqhn' type='audio/mpeg'>
+</audio>
 </body>
 </html>
