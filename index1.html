@@ -7,13 +7,20 @@
 <style>
 
 @media (max-width:768px){
-  .top{
-    top:10px;
-    font-size:32px;
-    letter-spacing:1px;
-    width:100%;
-    text-align:center;
-  }
+ .top{
+position:fixed;
+top:18px;
+left:50%;
+transform:translateX(-50%);
+font-size:54px;
+pointer-events:none;
+font-weight:900;
+letter-spacing:2px;
+color:#ff77d9;
+text-shadow:none;
+z-index:5;
+animation:pulse 6s infinite;
+}
 
   .sub{
     top:48px;
